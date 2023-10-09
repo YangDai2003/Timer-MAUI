@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Timer.MainPage">
+
+    <VerticalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Timer" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame BackgroundColor="Blue" CornerRadius="10">
+                <Label x:Name="hourLabel" WidthRequest="60" MaxLines="1" LineBreakMode ="WordWrap"  Text="00" TextColor="White"  HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+            </Frame>
+            <Label Text=":" FontSize="24" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="Blue" CornerRadius="10" >
+                <Label x:Name="minuteLabel" WidthRequest="60" MaxLines="1" LineBreakMode ="WordWrap"  Text="00" TextColor="White"   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Frame>
+            <Label Text=":" FontSize="24" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="Blue" CornerRadius="10" >
+                <Label x:Name="secondLabel" WidthRequest="60" MaxLines="1" LineBreakMode ="WordWrap"  Text="00" TextColor="White"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <Button x:Name="startPauseButton" Text="Start" Clicked="StartPauseButton_Clicked" WidthRequest="100" Margin="0,20,0,0"/>
+        <Button x:Name="resetButton" Text="Reset" Clicked="ResetButton_Clicked" WidthRequest="100" />
+    </VerticalStackLayout>
+</ContentPage>
